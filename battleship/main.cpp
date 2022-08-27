@@ -1,7 +1,7 @@
-#include "game.cpp"
+#include "board.h"
 
 int main() {
-    Game John;
-    John.printOcean(John.createOcean());
+    Board John;
+    John.printBoard();
     return 0;
 }
