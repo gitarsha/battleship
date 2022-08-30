@@ -1,7 +1,8 @@
 #include "board.h"
+#include "player.h"
 
 int main() {
-    Board John;
-    John.printBoard();
+    Board sea;
+    sea.printBoard();
     return 0;
 }

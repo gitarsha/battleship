@@ -6,21 +6,36 @@
 using namespace std;
 
 class Board {
-private:
-    vector<vector<int>> ocean;
-
 public:
-    const int CARRIER = 5;
-    const int BATTLESHIP = 4;
-    const int CRUISER = 3;
-    const int SUBMARINE = 3;
-    const int DESTROYER = 2;
+    vector<vector<char>> ocean;
+
+    /*
+    const char CARRIER = 'A';
+    const char BATTLESHIP = 'B';
+    const char CRUISER = 'C';
+    const char SUBMARINE = 'S';
+    const char DESTROYER = 'D';
+    */
+    
+    // Constructor
     Board();
+    
+    // Prints this board.
     void printBoard();
-    void attack(vector<vector<int>> ocean);
-    void placeShip(int ship, int head, int tail);
+
+    // Unfinished.
+    int spawnShip(char ship, pair<int, int> head, pair<int, int> tail);
+
+    // Unfinished.
+    void autoSpawnShips();
+
+    // Returns true if a ship has been placed here, false otherwise.
+    bool isOccupied(pair <int, int> tile);
+
+    // Converts valid tile input to pair<int, int>.
     pair<int, int> returnCoord(string tile);
-    int isTile(string tile);
+
+    // Destructor
     ~Board();
 };
 
